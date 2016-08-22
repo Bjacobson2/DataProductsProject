@@ -1,0 +1,35 @@
+#the ui.R code for: 
+
+library(shiny)
+
+# Define UI for application
+shinyUI(pageWithSidebar(
+  
+  #  Application title
+  headerPanel("Goals: How are you doing?"),
+  
+  # Sidebar with sliders that demonstrate various available options
+  sidebarPanel(
+    # Fitness  integer interval
+    sliderInput("fitness", "How many days did you exercise this week?", 
+                min=0, max=7, value=1),
+    
+    # Financial integer interval
+    sliderInput("financial", "How would you rate you financial strength?", 
+                min = 0, max = 7, value = 1),
+    # Social  integer interval
+    sliderInput("social", "How many friends did you spend time with?", 
+                min=0, max=7, value=1),
+    
+    # Reading integer interval
+    sliderInput("reading", "How many books did you read this month?", 
+                min = 0, max = 7, value = 1)
+  ),
+  
+  # Show a table summarizing the values entered with H3 text to congratulate
+  mainPanel(
+    tableOutput("values"),
+    h3('Keep up the good work!')
+  )
+  
+))
