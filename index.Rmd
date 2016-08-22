@@ -1,0 +1,38 @@
+---
+title       : The Big Pitch
+subtitle    : Goals App
+author      : Bjacobso
+job         : Sales
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+
+--- .class #id 
+
+## About the App
+
+This is an excellent App that takes the users evaluation of various goals, and gives a score.
+
+'''{r}
+sum(1:10)
+'''
+---
+
+## Next Steps
+
+More user data would allow greater comparison and charts.
+
+---
+
+## Scalability
+
+This has great potential and application for a simple app. 
+
+---
+
+## Further Steps
+
+Please invest, thank you!
