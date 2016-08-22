@@ -1,0 +1,27 @@
+library(shiny)
+
+# Define server logic 
+shinyServer(function(input, output) {
+  
+  # Reactive expression to compose a data frame containing all of the values
+  sliderValues <- reactive({
+    
+    # Composing data frame
+    rdata <- data.frame(
+      Name = c("Fitness Score", 
+               "Financial Score",
+               "Social Score",
+               "Reading Score"),
+      Value = as.character(c(paste(round((input$fitness/7)*100,1),"%"),
+                             paste(round((input$financial/7)*100,1),"%"),
+                             paste(round((input$social/7)*100,1),"%"),
+                             paste(round((input$reading/7)*100,1),"%"))),
+                            
+      stringsAsFactors=FALSE)
+  }) 
+  
+  # Show the values using an HTML table
+  output$values <- renderTable({
+    sliderValues()
+  })
+})
