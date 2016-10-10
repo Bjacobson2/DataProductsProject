@@ -1,0 +1,53 @@
+---
+title: "The Amazing Presentation: Go Lean"
+author: "Benjamin Jacobson"
+date: "October 5, 2016"
+output: ioslides_presentation
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+## Lean Methodology
+
+This is an R Markdown presentation. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document.
+
+## The Lean Methodology
+
+- Build
+- Measure
+- Learn
+
+
+## Creating an MVP
+
+### Why an MVP
+1. The goal of creating an MVP is to make the minimal amount of effort, while being to test the hypothesis in question.
+2. Upon builing and measuring customer behavior, learning is the goal.
+3. Validated learning results when the changes from the experiment yields a, hopefully, actionable insght based on the hypothesis. 
+
+### If you build it, they may not come
+- MVP allows you to test hypothesis of whether a sustainable business can be created.
+- Minimal waste is created (i.e. time, resources)
+
+## Summary of Car Data
+```{r cars, echo = TRUE}
+summary(cars)
+```
+
+## Slide with Plot
+
+```{r pressure}
+plot(pressure)
+```
+
+## Slide with Leaflet
+
+```{r, echo=F}
+library(leaflet)
+my_map <- leaflet() %>%  addTiles()
+my_map
+```
